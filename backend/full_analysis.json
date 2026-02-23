@@ -1,0 +1,15 @@
+{
+  "filename": "0088.png",
+  "deepskin": {
+    "success": true,
+    "pwat_score": 13.47631171641786,
+    "wound_detected": true,
+    "wound_area_pixels": 7280
+  },
+  "gemini": {
+    "success": true,
+    "analysis": "Please provide the image for analysis. I need to visually inspect the wound to complete the clinical assessment.",
+    "model_used": "gemini-2.5-flash-image",
+    "timestamp": "2026-02-19T11:35:13.094443"
+  }
+}

@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+.env
+__pycache__/
+*.pyc
+
+# Frontend Dependencies & Build
+node_modules/
+dist/
+.next/
+build/
+
+# Large Files & Model Weights
+*.pt
+*.pth
+*.onnx
+backend/data/
+backend/out/
+
+# IDE files
+.vscode/
+.idea/

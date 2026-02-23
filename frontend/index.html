@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Wound Analysis AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <i class="fas fa-biohazard header-icon"></i>
+                <h1>Wound Analysis AI</h1>
+            </div>
+            <p class="header-subtitle">Powered by Deepskin & Gemini</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Image Capture Section -->
+            <div class="capture-section">
+                <div class="image-preview-container" id="imagePreviewContainer">
+                    <div class="image-preview" id="imagePreview">
+                        <i class="fas fa-camera"></i>
+                        <span>No image selected</span>
+                    </div>
+                </div>
+
+                <div class="capture-buttons">
+                    <button class="btn btn-primary" id="cameraBtn">
+                        <i class="fas fa-camera"></i>
+                        Take Photo
+                    </button>
+                    <button class="btn btn-secondary" id="uploadBtn">
+                        <i class="fas fa-upload"></i>
+                        Upload Image
+                    </button>
+                </div>
+
+                <!-- Hidden file input -->
+                <input type="file" id="fileInput" accept="image/*" capture="environment" style="display: none;">
+            </div>
+
+            <!-- Analysis Button -->
+            <div class="analysis-section">
+                <button class="btn btn-analyze" id="analyzeBtn" disabled>
+                    <i class="fas fa-microscope"></i>
+                    Analyze Wound
+                </button>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="loading-indicator" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p>Analyzing wound... This may take 10-20 seconds</p>
+                <small>Deepskin is segmenting & Gemini is analyzing</small>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <!-- Deepskin Results Card -->
+                <div class="result-card deepskin-card">
+                    <div class="card-header">
+                        <i class="fas fa-microscope"></i>
+                        <h2>Deepskin Analysis</h2>
+                    </div>
+                    <div class="card-content" id="deepskinResults">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Gemini Results Card -->
+                <div class="result-card gemini-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain"></i>
+                        <h2>Clinical Assessment</h2>
+                        <span class="model-badge" id="modelBadge"></span>
+                    </div>
+                    <div class="card-content" id="geminiResults">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="errorText"></span>
+            </div>
+
+            <!-- History Section (Optional) -->
+            <div class="history-section" id="historySection" style="display: none;">
+                <div class="section-header">
+                    <i class="fas fa-history"></i>
+                    <h3>Recent Analyses</h3>
+                </div>
+                <div class="history-list" id="historyList">
+                    <!-- History items will be inserted here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© 2025 Wound Analysis AI | For clinical decision support only</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
